@@ -15,7 +15,7 @@
 @define-color red	#cc241d;
 @define-color green	#98971a;
 @define-color yellow	#d79921;
-@define-color blue	#458588;
+@define-color blue	#2a7bde;
 @define-color purple	#b16286;
 @define-color aqua	#689d6a;
 @define-color gray	#a89984;
@@ -34,7 +34,7 @@
 @define-color critical	@red;
 @define-color mode	@black;
 @define-color unfocused	@bg2;
-@define-color focused	@braqua;
+@define-color focused	@blue;
 @define-color inactive	@purple;
 @define-color sound	@brpurple;
 @define-color network	@purple;
@@ -60,7 +60,7 @@
 
 /* The whole bar */
 #waybar {
-	background: rgba(30, 33, 39, 0.8784313725); */ /* #282828e0 */
+	background: rgba(30, 33, 39, 0.8784313725); /* #282828e0 */
 	color: @white;
 	font-family: JetBrains Mono, Siji;
 	font-size: 10pt;
@@ -134,7 +134,7 @@
 
 /* Active (on focused output) */
 #workspaces button.focused {
-	color: @black;
+	color: @white;
 	background: @focused;
 }
 

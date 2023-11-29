@@ -1,56 +1,59 @@
-i3-wm.gaps.inner.size: 0
+regolith.sway.unsupported_gpu: true
+wm.gaps.inner.size: 0
 gnome.terminal.update: false
-regolith.wallpaper.file: /usr/share/backgrounds/linux.png
+regolith.wallpaper.file: ~/.local/share/backgrounds/linux.png
 regolith.wallpaper.options: zoom
-regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/linux.png
+regolith.lockscreen.wallpaper.file: ~/.local/share/backgrounds/linux.png
 regolith.lockscreen.wallpaper.options: zoom
 
 
 gtk.document_font_name: Roboto Regular 11
 gtk.font_name: Roboto Regular 11
-gtk.monospace_font_name: Fira Code 11
+gtk.monospace_font_name: Roboto Regular 11
 gtk.theme_name: adw-gtk3-dark
+gnome.wm.theme: adw-gtk3-dark
+gnome.wallpaper: /usr/share/backgrounds/linux.png
 gtk.icon_theme_name: Papirus-Dark 
-
 
 !regolith.look.path: /usr/share/regolith-look/dracula
 
-i3-wm.client.focused.color.background: #2A7BDE
-i3-wm.client.focused.color.border: #2A7BDE
-i3-wm.client.focused.color.child_border: #2A7BDE
-i3-wm.client.focused.color.indicator: #2A7BDE
-i3-wm.client.focused.color.text: #F8F8F2
-i3-wm.client.focused_inactive.color.background: #44475A	
-i3-wm.client.focused_inactive.color.border: #44475A
-i3-wm.client.focused_inactive.color.child_border: #44475A	
-i3-wm.client.focused_inactive.color.indicator: #44475A
-i3-wm.client.focused_inactive.color.text: #F8F8F2
-i3-wm.client.unfocused.color.background: #282A36
-i3-wm.client.unfocused.color.border: #282A36
-i3-wm.client.unfocused.color.child_border: #282A36	
-i3-wm.client.unfocused.color.indicator: #282A36
-i3-wm.client.unfocused.color.text: #BFBFBF
-i3-wm.client.urgent.color.background: #FF5555
-i3-wm.client.urgent.color.border: #44475A
-i3-wm.client.urgent.color.child_border: #FF5555
-i3-wm.client.urgent.color.indicator: #FF5555
-i3-wm.client.urgent.color.text: #F8F8F2
+wm.client.focused.color.background: #2A7BDE
+wm.client.focused.color.border: #2A7BDE
+wm.client.focused.color.child_border: #2A7BDE
+wm.client.focused.color.indicator: #2A7BDE
+wm.client.focused.color.text: #F8F8F2
+wm.client.focused_inactive.color.background: #44475A	
+wm.client.focused_inactive.color.border: #44475A
+wm.client.focused_inactive.color.child_border: #44475A	
+wm.client.focused_inactive.color.indicator: #44475A
+wm.client.focused_inactive.color.text: #F8F8F2
+wm.client.unfocused.color.background: #282A36
+wm.client.unfocused.color.border: #282A36
+wm.client.unfocused.color.child_border: #282A36	
+wm.client.unfocused.color.indicator: #282A36
+wm.client.unfocused.color.text: #BFBFBF
+wm.client.urgent.color.background: #FF5555
+wm.client.urgent.color.border: #44475A
+wm.client.urgent.color.child_border: #FF5555
+wm.client.urgent.color.indicator: #FF5555
+wm.client.urgent.color.text: #F8F8F2
 
-i3-wm.bar.background.color: #1E2127
-i3-wm.bar.separator.color: #2A7BDE
-i3-wm.bar.statusline.color: #F8F8F2
-i3-wm.bar.workspace.focused.background.color: #2A7BDE
-i3-wm.bar.workspace.focused.border.color: #2A7BDE
-i3-wm.bar.workspace.focused.text.color: #F8F8F2
-i3-wm.bar.workspace.active.background.color: #2A7BDE	
-i3-wm.bar.workspace.active.border.color: #282A36
-i3-wm.bar.workspace.active.text.color: #F8F8F2
-i3-wm.bar.workspace.inactive.background.color: #282A36	
-i3-wm.bar.workspace.inactive.border.color: #282A36
-i3-wm.bar.workspace.inactive.text.color: #BFBFBF
-i3-wm.bar.workspace.urgent.background.color: #FF5555
-i3-wm.bar.workspace.urgent.border.color: #FF5555
-i3-wm.bar.workspace.urgent.text.color: #F8F8F2
-i3-wm.bar.font: Roboto Regular 12
+wm.bar.background.color: #282A36
+wm.bar.separator.color: #2A7BDE
+wm.bar.statusline.color: #F8F8F2
+wm.bar.workspace.focused.background.color: #2A7BDE
+wm.bar.workspace.focused.border.color: #2A7BDE
+wm.bar.workspace.focused.text.color: #F8F8F2
+wm.bar.workspace.active.background.color: #2A7BDE	
+wm.bar.workspace.active.border.color: #282A36
+wm.bar.workspace.active.text.color: #F8F8F2
+wm.bar.workspace.inactive.background.color: #282A36	
+wm.bar.workspace.inactive.border.color: #282A36
+wm.bar.workspace.inactive.text.color: #BFBFBF
+wm.bar.workspace.urgent.background.color: #FF5555
+wm.bar.workspace.urgent.border.color: #FF5555
+wm.bar.workspace.urgent.text.color: #F8F8F2
+wm.bar.font: Roboto Regular 12
+
 
 regolith.look.path: /usr/share/regolith-look/default
