@@ -28,12 +28,13 @@
 @define-color braqua	#8ec07c;
 @define-color white	#ebdbb2;
 @define-color bg2	#504945;
+@define-color dracula   #282a36;
 
 
 @define-color warning 	@bryellow;
 @define-color critical	@red;
 @define-color mode	@black;
-@define-color unfocused	@bg2;
+@define-color unfocused	@dracula;
 @define-color focused	@blue;
 @define-color inactive	@purple;
 @define-color sound	@brpurple;
@@ -60,7 +61,7 @@
 
 /* The whole bar */
 #waybar {
-	background: rgba(30, 33, 39, 0.8784313725); /* #282828e0 */
+	background: rgba(40, 42, 54, 0.8784313725); /* #282828e0 */
 	color: @white;
 	font-family: JetBrains Mono, Siji;
 	font-size: 10pt;
@@ -81,6 +82,7 @@
 #backlight,
 #idle_inhibitor,
 #disk,
+#bluetooth,
 #user,
 #mpris {
 	padding-left: 8pt;
@@ -120,8 +122,6 @@
 /* Workspaces stuff */
 #workspaces button {
 	/*font-weight: bold;*/
-	padding-left: 2pt;
-	padding-right: 2pt;
 	color: @white;
 	background: @unfocused;
 }
@@ -160,6 +160,11 @@
 	color: @black;
 }
 
+#bluetooth {
+	background: @memory;
+	color: @black;
+}
+
 #network {
 	background: @network;
 	color: @white;
@@ -191,11 +196,11 @@
 }
 
 #tray {
-	background: @date;
+	background: @dracula;
 }
 
 #clock.date {
-	background: @date;
+	background: @dracula;
 	color: @white;
 }
 
