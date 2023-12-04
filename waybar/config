@@ -16,9 +16,9 @@
 		"cpu",
 		"temperature",
 		"battery",
-		"tray",
 		"clock#date",
-		"clock#time"
+		"clock#time",
+                "tray"
 	],
 
 	// Modules
@@ -101,7 +101,7 @@
 
 	"sway/workspaces": {
 		"disable-scroll-wraparound": true,
-		"smooth-scrolling-threshold": 4,
+		"smooth-scrolling-threshold": 1,
 		"enable-bar-scroll": true,
 		"format": "{name}"
 	},
@@ -112,8 +112,8 @@
 		"format-muted": "",
 		"format-icons": {
 			"headphone": "",
-			"hands-free": "",
-			"headset": "",
+			"hands-free": "",
+			"headset": "",
 			"phone": "",
 			"portable": "",
 			"car": "",

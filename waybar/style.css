@@ -29,6 +29,7 @@
 @define-color white	#ebdbb2;
 @define-color bg2	#504945;
 @define-color dracula   #282a36;
+@define-color drpurple  #BD93F9;
 
 
 @define-color warning 	@bryellow;
@@ -50,7 +51,7 @@
 /* Reset all styles */
 * {
 	border: none;
-	border-radius: 4px;
+	border-radius: 0px;
 	min-height: 0;
 	margin: 0;
 	padding: 0;
@@ -63,7 +64,7 @@
 #waybar {
 	background: rgba(40, 42, 54, 0.8784313725); /* #282828e0 */
 	color: @white;
-	font-family: JetBrains Mono, Siji;
+	font-family: Roboto Bold;
 	font-size: 10pt;
 	/*font-weight: bold;*/
 }
@@ -123,19 +124,19 @@
 #workspaces button {
 	/*font-weight: bold;*/
 	color: @white;
-	background: @unfocused;
+	background: @dracula;
 }
 
 /* Inactive (on unfocused output) */
 #workspaces button.visible {
 	color: @white;
-	background: @inactive;
+	background: @dracula;
 }
 
 /* Active (on focused output) */
 #workspaces button.focused {
 	color: @white;
-	background: @focused;
+	background: @drpurple;
 }
 
 /* Contains an urgent window */
@@ -156,43 +157,38 @@
 }
 
 #pulseaudio {
-	background: @sound;
+	background: @white;
 	color: @black;
 }
 
 #bluetooth {
-	background: @memory;
+	background: @drpurple;
 	color: @black;
 }
 
 #network {
-	background: @network;
-	color: @white;
+	background: @drpurple;
+	color: @black;
 }
 
 #memory {
-	background: @memory;
+	background: @white;
 	color: @black;
 }
 
 #cpu {
-	background: @cpu;
-	color: @white;
-}
-
-#temperature {
-	background: @temp;
+	background: @drpurple;
 	color: @black;
 }
 
-#language {
-	background: @layout;
+#temperature {
+	background: @white;
 	color: @black;
 }
 
 #battery {
-	background: @battery;
-	color: @white;
+	background: @drpurple;
+	color: @black;
 }
 
 #tray {
@@ -200,11 +196,11 @@
 }
 
 #clock.date {
-	background: @dracula;
-	color: @white;
+	background: @drpurple;
+	color: @black;
 }
 
 #clock.time {
-	background: @time;
+	background: @drpurple;
 	color: @black;
 }
