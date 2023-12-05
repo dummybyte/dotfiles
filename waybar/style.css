@@ -135,7 +135,7 @@
 
 /* Active (on focused output) */
 #workspaces button.focused {
-	color: @white;
+	color: @black;
 	background: @drpurple;
 }
 
@@ -147,7 +147,7 @@
 
 /* Style when cursor is on the button */
 #workspaces button:hover {
-	background: @black;
+	background: @dracula;
 	color: @white;
 }
 
@@ -203,4 +203,10 @@
 #clock.time {
 	background: @drpurple;
 	color: @black;
+}
+
+#custom-notification {
+  font-family: "NotoSansMono Regular";
+  background: @white;
+  color: @black;
 }

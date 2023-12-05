@@ -1,7 +1,13 @@
+dracula_accent_color: #BD93F9
+adwaita_accent_color: #2A7BDE
+black_text_color: #282828
+white_text_color: #F8F8F2
+white_background_color: #ebdbb2
+
 regolith.sway.unsupported_gpu: true
 wm.gaps.inner.size: 0
 gnome.terminal.update: false
-regolith.wallpaper.file: ~/.local/share/backgrounds/linux.png
+regolith.wallpaper.file: ~/.local/share/backgrounds/ji_light_by_Hiking93.jpg
 regolith.wallpaper.options: zoom
 regolith.lockscreen.wallpaper.file: ~/.local/share/backgrounds/linux.png
 regolith.lockscreen.wallpaper.options: zoom
@@ -14,6 +20,10 @@ gtk.theme_name: adw-gtk3-dark
 gnome.wm.theme: adw-gtk3-dark
 gnome.wallpaper: /usr/share/backgrounds/linux.png
 gtk.icon_theme_name: Papirus-Dark 
+
+! Notification Variables
+wm.program.notification_ui: swaync-client -t -sw
+wm.program.notifications: swaync
 
 !regolith.look.path: /usr/share/regolith-look/dracula
 
@@ -31,7 +41,7 @@ wm.client.unfocused.color.background: #282A36
 wm.client.unfocused.color.border: #282A36
 wm.client.unfocused.color.child_border: #282A36	
 wm.client.unfocused.color.indicator: #282A36
-wm.client.unfocused.color.text: #BFBFBF
+wm.client.unfocused.color.text: #F8F8F2
 wm.client.urgent.color.background: #FF5555
 wm.client.urgent.color.border: #44475A
 wm.client.urgent.color.child_border: #FF5555

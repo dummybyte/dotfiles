@@ -121,27 +121,6 @@ client.focused_inactive $focused_inactive.color.border     $focused_inactive.col
 client.unfocused        $unfocused.color.border            $unfocused.color.background        $unfocused.color.text              $unfocused.color.indicator         $unfocused.color.child_border
 client.urgent           $urgent.color.border               $urgent.color.background           $urgent.color.text                 $urgent.color.indicator            $urgent.color.child_border
 
-# Create variables from Xresources for bar look
-# set_from_resource $wm.bar.background.color wm.bar.background.color "#002b36"
-# set_from_resource $wm.bar.statusline.color wm.bar.statusline.color "#93a1a1"
-# set_from_resource $wm.bar.separator.color wm.bar.separator.color "#268bd2"
-
-# set_from_resource $wm.bar.workspace.focused.border.color wm.bar.workspace.focused.border.color "#073642"
-# set_from_resource $wm.bar.workspace.focused.background.color wm.bar.workspace.focused.background.color "#073642"
-# set_from_resource $wm.bar.workspace.focused.text.color wm.bar.workspace.focused.text.color "#eee8d5"
-
-# set_from_resource $wm.bar.workspace.active.border.color wm.bar.workspace.active.border.color "#073642"
-# set_from_resource $wm.bar.workspace.active.background.color wm.bar.workspace.active.background.color "#073642"
-# set_from_resource $wm.bar.workspace.active.text.color wm.bar.workspace.active.text.color "#586e75"
-
-# set_from_resource $wm.bar.workspace.inactive.border.color wm.bar.workspace.inactive.border.color "#002b36"
-# set_from_resource $wm.bar.workspace.inactive.background.color wm.bar.workspace.inactive.background.color "#002b36"
-# set_from_resource $wm.bar.workspace.inactive.text.color wm.bar.workspace.inactive.text.color "#586e75"
-
-# set_from_resource $wm.bar.workspace.urgent.border.color wm.bar.workspace.urgent.border.color "#dc322f"
-# set_from_resource $wm.bar.workspace.urgent.background.color wm.bar.workspace.urgent.background.color "#dc322f"
-# set_from_resource $wm.bar.workspace.urgent.text.color wm.bar.workspace.urgent.text.color "#fdf6e3"
-
 # Sets wm font for dialogs
 set_from_resource $wm.font gtk.font_name Sans 13
 font pango:$wm.font
@@ -149,9 +128,19 @@ font pango:$wm.font
 # Set dbus activation environment vars (Needed for GTK apps to work properly)
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
-bar {
-  status_command waybar
+# Waybar execution
+exec_always --no-startup-id sh $HOME/.config/regolith3/waybar_script.sh
+
+# Preserving TouchPad Configs
+input "1267:12590:ELAN0755:00_04F3:312E_Touchpad" {
+    tap enabled
+    natural_scroll enabled
 }
+
+# Setting Notification Daemon
+# exec swaync
+# bindsym $mod+m exec swaync-client -t -sw
+
 
 ###############################################################################
 # WM Config Partials
