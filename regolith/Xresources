@@ -6,12 +6,9 @@ white_background_color: #ebdbb2
 
 regolith.sway.unsupported_gpu: true
 wm.gaps.inner.size: 0
-gnome.terminal.update: false
-regolith.wallpaper.file: ~/.local/share/backgrounds/ji_light_by_Hiking93.jpg
-regolith.wallpaper.options: zoom
-regolith.lockscreen.wallpaper.file: ~/.local/share/backgrounds/linux.png
-regolith.lockscreen.wallpaper.options: zoom
 
+! Terminal app
+wm.program.terminal: /snap/bin/alacritty
 
 gtk.document_font_name: Roboto Regular 11
 gtk.font_name: Roboto Regular 11
@@ -19,11 +16,16 @@ gtk.monospace_font_name: Roboto Regular 11
 gtk.theme_name: adw-gtk3-dark
 gnome.wm.theme: adw-gtk3-dark
 gnome.wallpaper: /usr/share/backgrounds/linux.png
+regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/linux.png
 gtk.icon_theme_name: Papirus-Dark 
 
 ! Notification Variables
 wm.program.notification_ui: swaync-client -t -sw
 wm.program.notifications: swaync
+wm.program.bluetooth: blueman-manager
+
+! Lock Program
+wm.program.lock: swaylock
 
 !regolith.look.path: /usr/share/regolith-look/dracula
 

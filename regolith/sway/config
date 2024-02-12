@@ -131,6 +131,12 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
 # Waybar execution
 exec_always --no-startup-id sh $HOME/.config/regolith3/waybar_script.sh
 
+# Starting TLP for battery Optimization
+exec_always --no-startup-id systemctl start tlp.service
+
+# Wallpaper setup
+exec_always --no-startup-id swaymsg output "*" background /home/ANT.AMAZON.COM/arpandey/.local/share/backgrounds/linux.png fill
+
 # Preserving TouchPad Configs
 input "1267:12590:ELAN0755:00_04F3:312E_Touchpad" {
     tap enabled
