@@ -9,7 +9,8 @@
 	],
 
 	"modules-right": [
-                "bluetooth",
+		"disk",
+        "bluetooth",
 		"pulseaudio",
 		"network",
 		"memory",
@@ -23,6 +24,11 @@
 	],
 
 	// Modules
+    "disk": {
+		"interval": 30,
+		"format": "/- {free} "
+		
+	},
 
 	"battery": {
 		"interval": 10,
@@ -108,11 +114,11 @@
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume}%",
+		"format": "{icon} {desc} {volume}%",
 		"format-bluetooth": "{icon}  {volume}%",
 		"format-muted": "",
 		"format-icons": {
-			"headphone": "",
+			"headphone": "",
 			"hands-free": "",
 			"headset": "",
 			"phone": "",
@@ -129,7 +135,8 @@
   	       //"controller": "C8:CB:9E:D7:CD:95", // specify the alias of the controller if there are more than 1 on the system
   	       "format": " {status}",
   	       "format-disabled": " ", // an empty format will hide the module
-  	       "format-connected": " {num_connections} connected",
+ 	       "format-connected": " {num_connections} connected",
+		   "on-click": "blueman"
      	       //"tooltip-format": "{controller_alias}\t{controller_address}",
   	       //"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
   	       //"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
