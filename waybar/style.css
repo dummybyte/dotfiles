@@ -83,8 +83,9 @@
 #backlight,
 #idle_inhibitor,
 #disk,
-#bluetooth,
 #user,
+#custom-notification,
+#custom-bluetooth
 #mpris {
 	padding-left: 8pt;
 	padding-right: 8pt;
@@ -122,7 +123,7 @@
 
 /* Workspaces stuff */
 #workspaces button {
-	/*font-weight: bold;*/
+	font-weight: bold;
 	color: @white;
 	background: @dracula;
 }
@@ -156,13 +157,13 @@
 	margin-left: 35pt;
 }
 
-#pulseaudio {
+#disk {
 	background: @white;
 	color: @black;
 }
 
-#bluetooth {
-	background: @drpurple;
+#pulseaudio {
+	background: @white;
 	color: @black;
 }
 
@@ -208,5 +209,10 @@
 #custom-notification {
   font-family: "NotoSansMono Regular";
   background: @white;
+  color: @black;
+}
+
+#custom-bluetooth {
+  background: @drpurple;
   color: @black;
 }

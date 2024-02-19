@@ -10,7 +10,7 @@
 
 	"modules-right": [
 		"disk",
-        "bluetooth",
+		"custom/bluetooth",
 		"pulseaudio",
 		"network",
 		"memory",
@@ -19,8 +19,8 @@
 		"battery",
 		"clock#date",
 		"clock#time",
-                "tray",
-                "custom/notification"
+    "tray",
+    "custom/notification"
 	],
 
 	// Modules
@@ -131,17 +131,6 @@
 		"tooltip": false
 	},
 
-        "bluetooth": {
-  	       //"controller": "C8:CB:9E:D7:CD:95", // specify the alias of the controller if there are more than 1 on the system
-  	       "format": " {status}",
-  	       "format-disabled": " ", // an empty format will hide the module
- 	       "format-connected": " {num_connections} connected",
-		   "on-click": "blueman"
-     	       //"tooltip-format": "{controller_alias}\t{controller_address}",
-  	       //"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-  	       //"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-        },
-
 	"temperature": {
 		"critical-threshold": 90,
 		"interval": 5,
@@ -161,27 +150,34 @@
 		"spacing": 10
 	},
        
-          "custom/notification": {
-                "tooltip": false,
-                "format": "{icon}",
-                "format-icons": {
-                    "notification": "<span foreground='red'><sup></sup></span>",
-                    "none": "",
-                    "dnd-notification": "<span foreground='red'><sup></sup></span>",
-                    "dnd-none": "",
-                    "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-                    "inhibited-none": "",
-                    "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-                    "dnd-inhibited-none": ""
-                },
-          "return-type": "json",
-          "exec-if": "which swaync-client",
-          "exec": "swaync-client -swb",
-          "on-click": "swaync-client -t -sw",
-          "on-click-right": "swaync-client -d -sw",
-          "escape": true
+  "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
         },
+  "return-type": "json",
+  "exec-if": "which swaync-client",
+  "exec": "swaync-client -swb",
+  "on-click": "swaync-client -t -sw",
+  "on-click-right": "swaync-client -d -sw",
+  "escape": true
+},
 
+"custom/bluetooth": {
+	"interval": 2,
+	"exec": "python3 $HOME/.config/waybar/bluetooth_script.py",
+	"return_type": "json",
+	"format": "   {}  "
+},
+		
 }
 
 // vi:ft=jsonc
