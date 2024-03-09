@@ -1,58 +1,78 @@
-" show existing tab with 4 spaces width
-set tabstop=4
+" Disable compatibility with vi which can cause unexpected issues.
+set nocompatible
 
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
+" Enable type file detection. Vim will be able to try to detect the type of file in use.
+filetype on
 
-" On pressing tab, insert 4 spaces
-set expandtab
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on
 
-" Set syntax on
+" Load an indent file for the detected file type.
+filetype indent on
+
+" Turn syntax highlighting on.
 syntax on
 
-" Better commandline completion
-set wildmenu
-
-" Better indendation
-set autoindent
-
-" Always display the status line, even if one window is present
-set laststatus=2
-
-" Instead of failing a command because of unsaved changes, instead raise a
-" dialogue asking if you wish to save changed files.
-set confirm
-
-" Use visual bell instead of beeping when doing something wrong
-set visualbell
-
-" Display line numbers on the left
+" Add numbers to each line on the left-hand side.
 set number
 
-" Show commandline in bottom bar
+" Highlight cursor line underneath the cursor horizontally.
+" set cursorline
+
+" Set shift width to 4 spaces.
+set shiftwidth=4
+
+" Set tab width to 4 columns.
+set tabstop=4
+
+" Use space characters instead of tabs.
+set expandtab
+
+" Do not save backup files.
+set nobackup
+
+" Do not let cursor scroll below or above N number of lines when scrolling.
+set scrolloff=10
+
+" Do not wrap lines. Allow long lines to extend as far as the line goes.
+set nowrap
+
+" While searching though a file incrementally highlight matching characters as you type.
+set incsearch
+
+" Ignore capital letters during search.
+set ignorecase
+
+" Override the ignorecase option if searching for capital letters.
+" This will allow you to search specifically for capital letters.
+set smartcase
+
+" Show partial command you type in the last line of the screen.
 set showcmd
 
-" Show matching brackets
+" Show the mode you are on the last line.
+set showmode
+
+" Show matching words during a search.
 set showmatch
 
-" Vim Search
-set incsearch
+" Use highlighting when doing a search.
 set hlsearch
 
-"""""""""""""""""""""
-" Setting VIM Colors
-"""""""""""""""""""""
+" Set the commands to save in history default number is 20.
+set history=1000
 
-" Enable color syntax
-syntax enable
+" Enable auto completion menu after pressing TAB.
+set wildmenu
 
-" setting default color theme to 'monokai'. Change it to whatever works for you.
-colorscheme tender
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
 
-" Setting background color
-set background=dark
-highlight Normal ctermfg=grey ctermbg=black
+" There are certain files that we would never want to edit with Vim.
+" Wildmenu will ignore files with these extensions.
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-" Make vim use 256 colors. http://vim.wikia.com/wiki/Using_GUI_color_settings_in_a_terminal
-set t_Co=256
+colorscheme obsidian
 
+" fzf in vim
+set rtp+=/opt/homebrew/opt/fzf
